@@ -26,14 +26,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
       //  Event event = NetworkUtils.fetchData("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-01-01&endtime=2016-05-02&minfelt=50&minmagnitude=5");
-        //   new EventAsyncTask().execute("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-01-01&endtime=2016-05-02&minfelt=50&minmagnitude=5");
+        //   
 
         progress = (ProgressBar) findViewById(R.id.progressbar);
         listquakes = (ListView) findViewById(R.id.listviewquakes);
 
 //        TextView tx_mag = (TextView) findViewById(R.id.textmag);
 //        TextView tx_felt = (TextView) findViewById(R.id.textfelt);
-
+         
+        new EventAsyncTask().execute("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-01-01&endtime=2016-05-02&minfelt=50&minmagnitude=5");
 
     }
 //        visit.setOnClickListener(new View.OnClickListener() {
